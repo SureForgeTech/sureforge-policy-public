@@ -108,3 +108,7 @@ Near-term roadmap themes:
 - Executive drill-down views
 
 Policy Forge is for teams that want compliance to prove, preserve, and accelerate security work.
+
+## Trademarks
+
+SureForge, SureForgeTech and the SureForgeTech logo are trademarks of SureForgeTech. CC-BY-4.0 covers the text, not the names or logos.
