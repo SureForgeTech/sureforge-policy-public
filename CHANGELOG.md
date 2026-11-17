@@ -42,6 +42,7 @@ PR title prefix matches the highest-tier label added:
 - `NOTICE` now names SureForgeTech as the copyright holder and in the attribution line; the CC BY 4.0 licence text is unchanged.
 - Regenerate the fleet-core block in `AGENTS.md` to the current standard.
 - Refresh the generated fleet core while preserving public repository guidance.
+- Replace `CODE_OF_CONDUCT.md` with the Contributor Covenant 2.1, with a named enforcement contact.
 
 - Route the four workflows to the org's self-hosted runners (`LINUX_RUNNER_LABELS`, `MACOS_RUNNER_LABELS`); install Node via `actions/setup-node` and lychee and gitleaks as checksum-verified, architecture-matched binaries in user space.
 - Adopt the fleet agent-file standard: `AGENTS.md` with the shared core and repository rules (including the public-repository text guard), and a `CLAUDE.md` that only imports it.
