@@ -32,6 +32,7 @@ PR title prefix matches the highest-tier label added:
 
 ### [INTERNAL]
 
+- State in `CONTRIBUTING.md` that issues are welcome and outside pull requests are not accepted for now, and label the pull request checklist as a maintainer step.
 - Regenerate the fleet-core block in `AGENTS.md` to the current standard.
 - Refresh the generated fleet core while preserving public repository guidance.
 
