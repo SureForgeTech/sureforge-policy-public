@@ -66,12 +66,12 @@ Writable paths needed besides the data directory are `/tmp`, `/run/nginx`, `/run
 
 ## Verification
 
-Each release attaches docker-save tarballs for the engine, UI, and combined images (`linux/amd64` by default, `-arm64.tar` for `linux/arm64`), SPDX JSON SBOMs, vulnerability scan reports (`trivy-<image>-vX.json`), an OpenAPI 3.1 document, and `SHA256SUMS`. The tarballs, the OpenAPI document, and `SHA256SUMS` are signed keyless with cosign (`.sig` and `.pem` next to each file).
+Each release attaches docker-save tarballs for the engine, UI, and combined images (`linux/amd64` by default, `-arm64.tar` for `linux/arm64`), SPDX JSON SBOMs, a vulnerability scan report for the combined image (`trivy-app-vX.json`), an OpenAPI 3.1 document, and `SHA256SUMS`. The tarballs, the OpenAPI document, and `SHA256SUMS` are signed keyless with cosign (`.sig` and `.pem` next to each file).
 
-Verify with:
+Verify a file with cosign against its `.sig` and `.pem`. The certificate names the GitHub Actions release workflow that signed the file; check it was issued by `https://token.actions.githubusercontent.com` for the product's release workflow:
 
 ```sh
-cosign verify-blob --certificate-identity-regexp 'https://github\.com/ABD-Enterprises/policy-forge/\.github/workflows/release-containers\.yml.*' --certificate-oidc-issuer https://token.actions.githubusercontent.com --signature <file>.sig --certificate <file>.pem <file>
+cosign verify-blob --certificate-oidc-issuer https://token.actions.githubusercontent.com --certificate-identity-regexp '/\.github/workflows/release-containers\.yml@refs/tags/v' --signature <file>.sig --certificate <file>.pem <file>
 ```
 
 A public container registry is not yet available; load tarballs with `docker load`.

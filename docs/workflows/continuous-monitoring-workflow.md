@@ -6,7 +6,7 @@ When posture changes, reviewers can see whether the change came from a new findi
 
 ## Accepted risk
 
-Accepted risk is counted separately from open findings. Each acceptance records a reason and can carry an expiry date. When an acceptance expires, the finding returns to open and counts against posture again.
+Accepted risk is counted separately from open findings. Each acceptance records a reason and can carry an expiry date. When an acceptance expires, the finding returns to open on dashboards and finding lists.
 
 ## POA&M timeliness
 

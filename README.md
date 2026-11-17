@@ -53,7 +53,7 @@ Policy Forge is designed around records that can be inspected, traced, and chall
 - Compliance status changes are never silent.
 - Every executive tile drills down to source records.
 - Bad imports are hidden, never deleted, and can be restored.
-- Missing data shows as unknown, not as passing.
+- Missing POA&M coverage shows as unknown, not as passing.
 - AI assists analysts and engineers, but does not become the system of record.
 
 ## Public Repository Disclaimer
