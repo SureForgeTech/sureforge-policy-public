@@ -24,15 +24,22 @@ PR title prefix matches the highest-tier label added:
 
 ### [FEATURE]
 
-- None.
+- Document release v4.4.0 capabilities: reversible import removal with two-person approval, accepted risk counted separately with a reason and optional expiry, and POA&Ms for findings synced from integrations (README, continuous monitoring and ISSO workflows).
+- Document POA&M timeliness showing `UNKNOWN` when serious findings have no POA&M, and the **Generate missing POA&Ms** action.
+- Add v4.4.0 security principles to `docs/security/security-model.md` and release image signing, SBOMs and scan reports to `docs/security/sbom-and-supply-chain.md`.
+- Note AWS Security Hub, Inspector and GuardDuty control mapping, and the current auto-close limitation, in the roadmap pages.
 
 ### [FIX]
 
+- Point `SECURITY.md`, `docs/security/vulnerability-disclosure.md` and `NOTICE` at the moved and renamed repository `SureForgeTech/sureforge-policy-public`.
+- State the supported container platforms and that Kubernetes deployment is no longer offered; drop Kubernetes from the image contract's secret-mount note.
+- Document that the image contains no `curl` and give the health probe command; list the vulnerability scan reports among release verification files.
 - Point `SECURITY.md` and `docs/security/vulnerability-disclosure.md` at the enabled GitHub private vulnerability reporting channel instead of an unnamed one.
 
 ### [INTERNAL]
 
 - State in `CONTRIBUTING.md` that issues are welcome and outside pull requests are not accepted for now, and label the pull request checklist as a maintainer step.
+- `NOTICE` now names SureForgeTech as the copyright holder and in the attribution line; the CC BY 4.0 licence text is unchanged.
 - Regenerate the fleet-core block in `AGENTS.md` to the current standard.
 - Refresh the generated fleet core while preserving public repository guidance.
 
