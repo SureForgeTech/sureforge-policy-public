@@ -1,10 +1,22 @@
 # Contributing
 
-Thank you for improving the public Policy Forge documentation.
+## How to Contribute
 
-## Public-Safe Contributions Only
+Issues are welcome: bug reports, questions and ideas about the public Policy
+Forge documentation. Pull requests from outside contributors are not accepted
+for now: the maintainers write all changes themselves, so every change is
+written and reviewed by the maintainers. A pull request from outside may be
+closed without review. Open an issue describing the change
+instead.
 
-Contributions must not include:
+- For how to write a good issue, see the
+  [SureForgeTech contributing guide](https://github.com/SureForgeTech/.github/blob/main/CONTRIBUTING.md).
+- Do not report security problems in a public issue; follow
+  [SECURITY.md](SECURITY.md).
+
+## Public-Safe Content Only
+
+Issues and changes must not include:
 
 - Proprietary application source code
 - Internal guardrail implementation logic
@@ -17,7 +29,7 @@ Contributions must not include:
 
 Use synthetic examples and placeholders only.
 
-## Before Opening a Pull Request
+## For Maintainers: Before Opening a Pull Request
 
 Run:
 
