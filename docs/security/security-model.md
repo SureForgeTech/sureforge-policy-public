@@ -14,7 +14,7 @@ Policy Forge follows a public-safe security model centered on traceability, leas
 - Require two-person approval to remove imported data.
 - Link OpenID Connect sign-in to existing accounts only by an email the identity provider marks as verified.
 - Protect enrolled MFA from replacement.
-- Refuse outbound integration and AI calls to cloud metadata addresses always, and to internal network addresses unless an operator allows a specific host.
+- Refuse outbound integration and AI calls to cloud metadata addresses always, and to internal network addresses unless an operator allows them.
 - Keep client IP addresses and user IDs out of public metrics.
 - Give new users a one-time invite link that expires after 7 days, so they set their own password.
 

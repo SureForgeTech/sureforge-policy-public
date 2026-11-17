@@ -10,4 +10,4 @@ Accepted risk is counted separately from open findings. Each acceptance records 
 
 ## POA&M timeliness
 
-POA&M timeliness shows `UNKNOWN`, not `PASS`, when serious findings have no POA&M. Missing records never read as compliant. The **Generate missing POA&Ms** action creates POA&M records for those findings so timeliness can be measured.
+POA&M timeliness shows as unknown, not as passing, when serious findings have no POA&M. Missing records never read as compliant. The **Generate missing POA&Ms** action creates POA&M records for those findings so timeliness can be measured.
