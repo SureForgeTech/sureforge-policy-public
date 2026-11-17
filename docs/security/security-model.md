@@ -10,5 +10,12 @@ Policy Forge follows a public-safe security model centered on traceability, leas
 - Treat AI output as advisory.
 - Avoid hidden dashboard calculations.
 - Support restricted and regulated operating models.
+- Keep customer data inside its system boundary.
+- Require two-person approval to remove imported data.
+- Link single sign-on accounts only by verified email.
+- Protect enrolled MFA from replacement.
+- Refuse outbound integration and AI calls to internal network and cloud metadata addresses.
+- Keep client IP addresses and user IDs out of public metrics.
+- Give new users a one-time invite link that expires after 7 days, so they set their own password.
 
 This document intentionally avoids proprietary implementation detail, internal guardrail logic, deployment internals, and exploitable security information.

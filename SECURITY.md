@@ -6,7 +6,7 @@ This repository contains public-safe product documentation, architecture summari
 
 ## Reporting a Vulnerability
 
-Report vulnerabilities privately through GitHub private vulnerability reporting: open this repository's **Security** tab and choose **Report a vulnerability** (<https://github.com/ABD-Enterprises/policy-forge-public/security/advisories/new>). Do not open a public issue for a vulnerability.
+Report vulnerabilities privately through GitHub private vulnerability reporting: open this repository's **Security** tab and choose **Report a vulnerability** (<https://github.com/SureForgeTech/sureforge-policy-public/security/advisories/new>). Do not open a public issue for a vulnerability.
 
 ## Reporting Security Questions
 

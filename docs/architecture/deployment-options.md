@@ -9,4 +9,6 @@ Public deployment descriptions stay conceptual:
 - Restricted network deployment
 - Air-gapped readiness path
 
+Supported container platforms are AWS ECS Fargate (including AWS GovCloud), Azure Container Apps, Google Cloud Run, and Docker. Kubernetes deployment (Helm charts and manifests) is no longer offered.
+
 This repository does not include deployment internals or live infrastructure values.

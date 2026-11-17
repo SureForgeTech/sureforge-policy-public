@@ -10,6 +10,7 @@
 | Serving port | `3000` for nginx. Configure the platform's container or target port as `3000`. |
 | Internal API port | `8000` inside the container only. |
 | `PORT` | Not honoured. |
+| Health probe | The image contains no `curl`. Container health checks run `python3 /usr/local/bin/policy-forge-healthcheck <url>`. A custom health check that calls `curl` must switch to this command. |
 
 nginx serves the UI at `/`, proxies `/api/` to the API with the `/api` prefix stripped, and proxies `/healthz`.
 
@@ -35,7 +36,7 @@ All endpoints are under `/api` except `/healthz`.
 | Serve | Default command. Runs preflight unless `POLICY_FORGE_PREFLIGHT=skip`, then starts supervisord. Preflight refuses a database whose schema is not current, so a new database must be initialised first. |
 | `init` | Run the image with the single argument `init` and entrypoint `policy-forge-entrypoint`. It runs `policy-forge db bootstrap-schema --accept-irreversible` (schema plus signed framework-pack catalog) and then `policy-forge bootstrap` (bootstrap admin). Exit codes are `0` on success, `1` on failure, and `2` if given extra arguments. Schema bootstrap takes a PostgreSQL advisory lock, so concurrent init runs serialize. Run it once after the first deploy and after upgrades that change the schema. If `schema_version` was stamped before the file migrations ran, typically `policy-forge bootstrap` run before `db bootstrap-schema`, `bootstrap-schema` refuses with a recovery message. |
 
-Secret file staging applies in both modes. When `POLICY_FORGE_MASTER_KEY_FILE` or `POLICY_FORGE_BOOTSTRAP_ADMIN_PASSWORD_FILE` points at a readable file, the entrypoint copies it to `${TMPDIR:-/tmp}/policy-forge-secrets/<VARIABLE>` with directory mode `0700` and file mode `0600`, and points the variable at the copy. This lets read-only `0444` secret mounts from Key Vault, Secret Manager, or Kubernetes pass the key-file permission check. The original mount is never modified.
+Secret file staging applies in both modes. When `POLICY_FORGE_MASTER_KEY_FILE` or `POLICY_FORGE_BOOTSTRAP_ADMIN_PASSWORD_FILE` points at a readable file, the entrypoint copies it to `${TMPDIR:-/tmp}/policy-forge-secrets/<VARIABLE>` with directory mode `0700` and file mode `0600`, and points the variable at the copy. This lets read-only `0444` secret mounts from Key Vault, Secrets Manager or Secret Manager pass the key-file permission check. The original mount is never modified.
 
 ## Environment variables
 
@@ -65,7 +66,7 @@ Writable paths needed besides the data directory are `/tmp`, `/run/nginx`, `/run
 
 ## Verification
 
-Each release attaches docker-save tarballs for the engine, UI, and combined images (`linux/amd64` by default, `-arm64.tar` for `linux/arm64`), SPDX JSON SBOMs, an OpenAPI 3.1 document, and `SHA256SUMS`. The tarballs, the OpenAPI document, and `SHA256SUMS` are signed keyless with cosign (`.sig` and `.pem` next to each file).
+Each release attaches docker-save tarballs for the engine, UI, and combined images (`linux/amd64` by default, `-arm64.tar` for `linux/arm64`), SPDX JSON SBOMs, vulnerability scan reports (`trivy-<image>-vX.json`), an OpenAPI 3.1 document, and `SHA256SUMS`. The tarballs, the OpenAPI document, and `SHA256SUMS` are signed keyless with cosign (`.sig` and `.pem` next to each file).
 
 Verify with:
 
