@@ -36,6 +36,9 @@ Compliance is essential to the operating model. Policy Forge keeps it tied to so
 - SSP support
 - Authorization package assembly
 - Waivers and risk acceptances
+- Accepted risk shown separately from open findings, with a reason and an optional expiry
+- Reversible import removal with two-person approval
+- POA&Ms for findings synced from integrations (GitHub, AWS Security Hub)
 - Continuous monitoring
 - Control history and regression visibility
 - AI-assisted workflow support, with human review
@@ -49,6 +52,8 @@ Policy Forge is designed around records that can be inspected, traced, and chall
 - Dashboard calculations are explainable.
 - Compliance status changes are never silent.
 - Every executive tile drills down to source records.
+- Bad imports are hidden, never deleted, and can be restored.
+- Missing POA&M coverage shows as unknown, not as passing.
 - AI assists analysts and engineers, but does not become the system of record.
 
 ## Public Repository Disclaimer
