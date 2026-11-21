@@ -51,4 +51,4 @@ PR title prefix matches the highest-tier label added:
 
 ### [SECURITY]
 
-- None.
+- Default the manual macOS smoke workflow to no token permissions and grant read access only to its validation job.

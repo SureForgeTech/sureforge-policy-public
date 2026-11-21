@@ -3,6 +3,8 @@ name: Local macOS smoke
 on:
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   local-macos-smoke:
     permissions:
