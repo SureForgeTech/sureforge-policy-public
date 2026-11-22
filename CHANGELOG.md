@@ -38,6 +38,7 @@ PR title prefix matches the highest-tier label added:
 
 ### [INTERNAL]
 
+- Wire scripts/check-no-private-paths.sh into the secret-scan workflow so CI validates private path and identifier restrictions on every pull request and push to main (#23).
 - Pull requests are now welcome with a DCO sign-off (`git commit -s`): `CONTRIBUTING.md` says so, and a new `dco` workflow checks the sign-off on pull requests from outside contributors.
 - State in `CONTRIBUTING.md` that issues are welcome and outside pull requests are not accepted for now, and label the pull request checklist as a maintainer step.
 - `NOTICE` now names SureForgeTech as the copyright holder and in the attribution line; the CC BY 4.0 licence text is unchanged.
